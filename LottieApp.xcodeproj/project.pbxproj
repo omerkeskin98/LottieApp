@@ -13,6 +13,8 @@
 		17FD498C2C48FC5600E48F95 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 17FD498B2C48FC5600E48F95 /* Base */; };
 		17FD498E2C48FC5700E48F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FD498D2C48FC5700E48F95 /* Assets.xcassets */; };
 		17FD49912C48FC5700E48F95 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 17FD49902C48FC5700E48F95 /* Base */; };
+		17FD499B2C48FCA400E48F95 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 17FD499A2C48FCA400E48F95 /* Lottie */; };
+		17FD499D2C48FD1A00E48F95 /* loading_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 17FD499C2C48FD1900E48F95 /* loading_animation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		17FD498D2C48FC5700E48F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17FD49902C48FC5700E48F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17FD49922C48FC5700E48F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17FD499C2C48FD1900E48F95 /* loading_animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading_animation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FD499B2C48FCA400E48F95 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +44,10 @@
 		17FD49782C48FC5600E48F95 = {
 			isa = PBXGroup;
 			children = (
+				17FD499C2C48FD1900E48F95 /* loading_animation.json */,
 				17FD49832C48FC5600E48F95 /* LottieApp */,
 				17FD49822C48FC5600E48F95 /* Products */,
+				17FD49992C48FCA400E48F95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +73,13 @@
 			path = LottieApp;
 			sourceTree = "<group>";
 		};
+		17FD49992C48FCA400E48F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = LottieApp;
+			packageProductDependencies = (
+				17FD499A2C48FCA400E48F95 /* Lottie */,
+			);
 			productName = LottieApp;
 			productReference = 17FD49812C48FC5600E48F95 /* LottieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 17FD49782C48FC5600E48F95;
+			packageReferences = (
+				17FD49982C48FC9A00E48F95 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 17FD49822C48FC5600E48F95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FD499D2C48FD1A00E48F95 /* loading_animation.json in Resources */,
 				17FD498E2C48FC5700E48F95 /* Assets.xcassets in Resources */,
 				17FD49912C48FC5700E48F95 /* Base in Resources */,
 				17FD498C2C48FC5600E48F95 /* Base in Resources */,
@@ -363,6 +383,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17FD49982C48FC9A00E48F95 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17FD499A2C48FCA400E48F95 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17FD49982C48FC9A00E48F95 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17FD49792C48FC5600E48F95 /* Project object */;
 }
